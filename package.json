@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server",
+    "client": "npm start --prefix client"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
     "pg": "^7.14.0",
+    "postgresql": "0.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
   }
